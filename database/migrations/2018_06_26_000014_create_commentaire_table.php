@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateCommentaireTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'users';
+    public $set_schema_table = 'commentaire';
 
     /**
      * Run the migrations.
-     * @table users
+     * @table commentaire
      *
      * @return void
      */
@@ -24,21 +24,20 @@ class CreateUsersTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->rememberToken();
-            $table->unsignedInteger('roles_id');
+            $table->string('name', 45);
+            $table->string('titre', 45);
+            $table->string('image', 45);
+            $table->string('texte', 45);
+            $table->unsignedInteger('articles_id');
+            $table->unsignedInteger('articles_categorie_id');
 
-            $table->index(["roles_id"], 'fk_users_roles1_idx');
-
-            $table->unique(["email"], 'users_email_unique');
+            $table->index(["articles_id", "articles_categorie_id"], 'fk_commentaire_articles1_idx');
             $table->softDeletes();
             $table->nullableTimestamps();
 
 
-            $table->foreign('roles_id', 'fk_users_roles1_idx')
-                ->references('id')->on('roles')
+            $table->foreign('articles_id', 'fk_commentaire_articles1_idx')
+                ->references('id')->on('articles')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

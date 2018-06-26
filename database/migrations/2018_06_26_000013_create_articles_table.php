@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'users';
+    public $set_schema_table = 'articles';
 
     /**
      * Run the migrations.
-     * @table users
+     * @table articles
      *
      * @return void
      */
@@ -24,21 +24,26 @@ class CreateUsersTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name');
-            $table->string('email');
-            $table->string('password');
-            $table->rememberToken();
-            $table->unsignedInteger('roles_id');
+            $table->string('image', 45);
+            $table->string('titre', 45);
+            $table->string('texte');
+            $table->unsignedInteger('users_id');
+            $table->unsignedInteger('categorie_id');
 
-            $table->index(["roles_id"], 'fk_users_roles1_idx');
+            $table->index(["categorie_id"], 'fk_articles_categorie1_idx');
 
-            $table->unique(["email"], 'users_email_unique');
+            $table->index(["users_id"], 'fk_articles_users_idx');
             $table->softDeletes();
             $table->nullableTimestamps();
 
 
-            $table->foreign('roles_id', 'fk_users_roles1_idx')
-                ->references('id')->on('roles')
+            $table->foreign('users_id', 'fk_articles_users_idx')
+                ->references('id')->on('users')
+                ->onDelete('no action')
+                ->onUpdate('no action');
+
+            $table->foreign('categorie_id', 'fk_articles_categorie1_idx')
+                ->references('id')->on('categorie')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });
