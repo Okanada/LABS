@@ -26,7 +26,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('image', 45);
             $table->string('titre', 45);
-            $table->string('texte');
+            $table->text('texte');
             $table->unsignedInteger('users_id');
             $table->unsignedInteger('categorie_id');
 

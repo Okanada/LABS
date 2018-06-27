@@ -24,7 +24,7 @@ class CreateContentTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('texte');
+            $table->text('texte');
             $table->softDeletes();
             $table->nullableTimestamps();
         });

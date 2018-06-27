@@ -12,8 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('Home');
+
+Route::get('/services', function () {
+    return view('services');
+})->name('Services');
+
+
+
+
 
 Auth::routes();
 

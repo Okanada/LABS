@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('image', 45);
             $table->string('name');
             $table->string('email');
             $table->string('password');
@@ -31,8 +32,6 @@ class CreateUsersTable extends Migration
             $table->unsignedInteger('roles_id');
 
             $table->index(["roles_id"], 'fk_users_roles1_idx');
-
-            $table->unique(["email"], 'users_email_unique');
             $table->softDeletes();
             $table->nullableTimestamps();
 
