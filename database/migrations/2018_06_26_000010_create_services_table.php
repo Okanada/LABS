@@ -26,7 +26,7 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('icone', 45);
             $table->string('titre', 45);
-            $table->text('texte');
+            $table->string('texte');
             $table->softDeletes();
             $table->nullableTimestamps();
         });

@@ -20,9 +20,29 @@ Route::get('/services', function () {
 })->name('Services');
 
 
+Route::get('/blog', function () {
+    return view('blog');
+})->name('Blog');
+
+
+Route::get('/blogpost', function () {
+    return view('blog-post');
+})->name('BlogPost');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('Contact');
+
+Route::get('/elements', function () {
+    return view('elements');
+})->name('Elements');
+
+
+
 
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

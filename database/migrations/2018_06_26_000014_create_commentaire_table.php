@@ -26,8 +26,8 @@ class CreateCommentaireTable extends Migration
             $table->increments('id');
             $table->string('name', 45);
             $table->string('titre', 45);
-            $table->string('image', 45);
-            $table->text('texte');
+            $table->string('image', 45)->nullable();
+            $table->string('texte', 45);
             $table->unsignedInteger('articles_id');
             $table->unsignedInteger('articles_categorie_id');
 

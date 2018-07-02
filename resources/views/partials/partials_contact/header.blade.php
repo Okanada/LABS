@@ -17,9 +17,9 @@
 		<nav>
 			<ul class="menu-list">
 				<li><a href="{{route('Home')}}">Home</a></li>
-				<li class="active"><a href="{{route('Services')}}">Services</a></li>
+				<li><a href="{{route('Services')}}">Services</a></li>
 				<li><a href="{{route('Blog')}}">Blog</a></li>
-				<li><a href="{{route('Contact')}}">Contact</a></li>
+				<li class="active"><a href="{{route('Contact')}}">Contact</a></li>
 				<li><a href="{{route('Elements')}}">Elements</a></li>
 			</ul>
 		</nav>
@@ -32,12 +32,12 @@
 		<div class="overlay"></div>
 		<div class="container text-right">
 			<div class="page-info">
-				<h2>Services</h2>
+				<h2>Contact</h2>
 				<div class="page-links">
 					<a href="#">Home</a>
-					<span>Services</span>
+					<span>Contact</span>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Page header end-->
+	<!-- Page header end -->

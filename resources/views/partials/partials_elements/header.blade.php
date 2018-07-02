@@ -17,10 +17,10 @@
 		<nav>
 			<ul class="menu-list">
 				<li><a href="{{route('Home')}}">Home</a></li>
-				<li class="active"><a href="{{route('Services')}}">Services</a></li>
+				<li><a href="{{route('Services')}}">Services</a></li>
 				<li><a href="{{route('Blog')}}">Blog</a></li>
 				<li><a href="{{route('Contact')}}">Contact</a></li>
-				<li><a href="{{route('Elements')}}">Elements</a></li>
+				<li class="active"><a href="{{route('Elements')}}">Elements</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -32,10 +32,10 @@
 		<div class="overlay"></div>
 		<div class="container text-right">
 			<div class="page-info">
-				<h2>Services</h2>
+				<h2>Blog</h2>
 				<div class="page-links">
 					<a href="#">Home</a>
-					<span>Services</span>
+					<span>Blog</span>
 				</div>
 			</div>
 		</div>

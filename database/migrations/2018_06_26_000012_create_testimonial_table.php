@@ -24,7 +24,7 @@ class CreateTestimonialTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->text('texte');
+            $table->string('texte');
             $table->unsignedInteger('client_id');
 
             $table->index(["client_id"], 'fk_testimonial_client1_idx');

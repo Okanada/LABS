@@ -1,22 +1,6 @@
-
-
-
-
-{{-- ON APPEL LE LAYOUTS --}}
-
 @extends('layouts.layouts_home.front')
 
-
-
-
-
-
-
-
-
-
 @section('content-home')
-	
 	<!-- About section -->
 	<div class="about-section">
 		<div class="overlay"></div>
@@ -110,7 +94,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src='{{asset("theme/img/avatar/01.jpg")}}'  alt="">
+									<img src='{{asset("theme/img/avatar/01.jpg")}}' alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -124,7 +108,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src='{{asset("theme/img/avatar/02.jpg")}}'  alt="">
+									<img src='{{asset("theme/img/avatar/02.jpg")}}' alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -138,7 +122,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla. Nulla sit amet luctus dolor. Etiam finibus consequa.</p>
 							<div class="client-info">
 								<div class="avatar">
-									<img src='{{asset("theme/img/avatar/01.jpg")}}'  alt="">
+									<img src='{{asset("theme/img/avatar/01.jpg")}}' alt="">
 								</div>
 								<div class="client-name">
 									<h2>Michael Smith</h2>
@@ -374,5 +358,6 @@
 			</div>
 		</div>
 	</div>
-	<!-- Promotion section end-->
+    <!-- Promotion section end-->
 @endsection
+

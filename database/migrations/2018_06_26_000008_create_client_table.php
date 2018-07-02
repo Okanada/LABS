@@ -24,10 +24,8 @@ class CreateClientTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('image', 45);
+            $table->string('image', 45)->nullable();
             $table->string('name', 45);
-            $table->string('titre', 45);
-            $table->text('texte');
             $table->softDeletes();
             $table->nullableTimestamps();
         });

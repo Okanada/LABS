@@ -24,9 +24,9 @@ class CreateArticlesTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('image', 45);
+            $table->string('image', 45)->nullable();
             $table->string('titre', 45);
-            $table->text('texte');
+            $table->string('texte');
             $table->unsignedInteger('users_id');
             $table->unsignedInteger('categorie_id');
 

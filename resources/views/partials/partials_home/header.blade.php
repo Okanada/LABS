@@ -18,9 +18,9 @@
 			<ul class="menu-list">
 				<li class="active"><a href="{{route('Home')}}">Home</a></li>
 				<li><a href="{{route('Services')}}">Services</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
-				<li><a href="elements.html">Elements</a></li>
+				<li><a href="{{route('Blog')}}">Blog</a></li>
+				<li><a href="{{route('Contact')}}">Contact</a></li>
+				<li><a href="{{route('Elements')}}">Elements</a></li>
 			</ul>
 		</nav>
 	</header>
